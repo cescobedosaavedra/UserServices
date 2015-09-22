@@ -13,6 +13,6 @@ namespace Usuarios_SOAPService.Dominio
         public int Id { get; set; }
         [DataMember]
         public string PrioridadTicket { get; set; }
-        //Comentario21
+        //Comentari
     }
 }
