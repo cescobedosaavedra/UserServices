@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Usuarios_SOAPService"
+                   namespace="Usuarios_SOAPService.Dominio"
+                   default-lazy="false">
+  <class name="Prioridad" table="t_prioridad">
+    <id name="Id" column="id">
+      <generator class="increment" />
+    </id>
+    <property name="PrioridadTicket" column="prioridad" />
+  </class>
+</hibernate-mapping>

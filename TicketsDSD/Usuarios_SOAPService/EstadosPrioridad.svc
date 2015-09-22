@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Usuarios_SOAPService.EstadosPrioridad" CodeBehind="EstadosPrioridad.svc.cs" %>
