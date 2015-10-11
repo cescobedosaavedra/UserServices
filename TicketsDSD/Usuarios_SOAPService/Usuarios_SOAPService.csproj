@@ -74,29 +74,41 @@
     <EmbeddedResource Include="Dominio\Estado.hbm.xml" />
     <EmbeddedResource Include="Dominio\Prioridad.hbm.xml" />
     <Content Include="Empleados.svc" />
+    <Content Include="EmpleadosREST.svc" />
     <Content Include="EstadosPrioridad.svc" />
+    <Content Include="EstadosPrioridadREST.svc" />
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Empleado.cs" />
-    <EmbeddedResource Include="Dominio\ClaseEmpleado.cs" />
     <Compile Include="Dominio\Estado.cs" />
     <Compile Include="Dominio\Prioridad.cs" />
     <Compile Include="Empleados.svc.cs">
       <DependentUpon>Empleados.svc</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadosREST.svc.cs">
+      <DependentUpon>EmpleadosREST.svc</DependentUpon>
+    </Compile>
     <Compile Include="EstadosPrioridad.svc.cs">
       <DependentUpon>EstadosPrioridad.svc</DependentUpon>
     </Compile>
+    <Compile Include="EstadosPrioridadREST.svc.cs">
+      <DependentUpon>EstadosPrioridadREST.svc</DependentUpon>
+    </Compile>
     <Compile Include="IEmpleados.cs" />
+    <Compile Include="IEmpleadosREST.cs" />
     <Compile Include="IEstadosPrioridad.cs" />
+    <Compile Include="IEstadosPrioridadREST.cs" />
     <Compile Include="Persistencia\BaseDAO.cs" />
     <Compile Include="Persistencia\ConexionUtil.cs" />
     <Compile Include="Persistencia\EmpleadoDAO.cs" />
+    <Compile Include="Persistencia\EmpleadoRESTDAO.cs" />
     <Compile Include="Persistencia\EstadoDAO.cs" />
+    <Compile Include="Persistencia\EstadoRESTDAO.cs" />
     <Compile Include="Persistencia\NHibernateHelper.cs" />
     <Compile Include="Persistencia\PrioridadDAO.cs" />
+    <Compile Include="Persistencia\PrioridadRESTDAO.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -130,7 +142,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49750</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49750/</IISUrl>
+          <IISUrl>http://localhost:49760/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -13,4 +13,15 @@ namespace Usuarios_SOAPService.Persistencia
             //return "Data Source = chio - hp; Initial Catalog = BD_Empleados; Integrated Security = True;";
         }
     }
+
+    public class Conexion
+    {
+     public static string Cadena
+        {
+            get
+            {
+                return "Data Source=GSSPL00038;Initial Catalog=BD_Empleados;Integrated Security=True;";
+            }
+        }
+    }
 }

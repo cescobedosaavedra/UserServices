@@ -25,12 +25,12 @@ namespace Usuarios_SOAPService
             }
         }
 
-        public Empleado CrearEmpleado(string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado)
+        public Empleado CrearEmpleado(string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string Password, string Estado)
         {
             throw new NotImplementedException();
         }
 
-        public Empleado CrearEmpleado(string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado)
+        public Empleado CrearEmpleado(string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string password, string estado)
         {
             Empleado empleadoACrear = new Empleado()
             {
@@ -40,6 +40,8 @@ namespace Usuarios_SOAPService
                 CargoEmpleado = cargoEmpleado,
                 TelefonoEmpleado = telefonoEmpleado,
                 AreaEmpleado = areaEmpleado,
+                Password = password,
+                Estado = estado
             };
             return EmpleadoDAO.Crear(empleadoACrear);
 
@@ -56,12 +58,12 @@ namespace Usuarios_SOAPService
             return EmpleadoDAO.ListarTodos().ToList();
         }
 
-        public Empleado ModificarEmpleado(int CodEmpleado, string ApellidoEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado)
+        public Empleado ModificarEmpleado(int CodEmpleado, string CorreoEmpleado, string CargoEmpleado, string TelefonoEmpleado, string AreaEmpleado, string areaEmpleado, string Password, string Estado)
         {
             throw new NotImplementedException();
         }
 
-        public Empleado ModificarEmpleado(int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado)
+        public Empleado ModificarEmpleado(int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string correoEmpleado, string cargoEmpleado, string telefonoEmpleado, string areaEmpleado, string password, string estado)
         {
             Empleado empleadoAModificar = new Empleado()
             {
@@ -72,6 +74,8 @@ namespace Usuarios_SOAPService
                 CargoEmpleado = cargoEmpleado,
                 TelefonoEmpleado = telefonoEmpleado,
                 AreaEmpleado = areaEmpleado,
+                Password = password,
+                Estado = estado
             };
             return EmpleadoDAO.Modificar(empleadoAModificar);
 
@@ -85,9 +89,17 @@ namespace Usuarios_SOAPService
             //return emple;
         }
 
+
         Empleado IEmpleados.EliminarEmpleado(int CodEmpleado)
         {
             throw new NotImplementedException();
         }
+
+        public Empleado VerificarUsuario(string NombreEmpleado, string Password)
+        {
+            return EmpleadoDAO.VerificarUsuario(NombreEmpleado, Password);
+        }
+
+
     }
 }
